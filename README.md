@@ -33,7 +33,7 @@ Automates news article categorization for FlipItNews, a fintech startup, using N
 
 * **Naive Bayes + BoW:** Top performer, ideal for balanced text classification.
 * **Visuals:** Word clouds confirmed improved feature relevance post-preprocessing.
-   ![Alt text](confusion_matrices.png)
+   ![Alt text](images/confusion_matrices.png)
 
 ## 🧠 Key Takeaways
 
