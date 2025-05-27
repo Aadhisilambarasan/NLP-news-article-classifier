@@ -1,115 +1,65 @@
-# NLP-NEWS-ARTICLE-CLASSIFIER
+# 📰 FlipItNews NLP News Classifier
 
-> Categorizing news articles using multi‑model NLP classification pipeline on 2k+ news articles using TF‑IDF and four classifier algorithms
+Automates news article categorization for FlipItNews, a fintech startup, using NLP to classify **2,126 articles** into Politics, Technology, Sports, Business, or Entertainment with **97.6% accuracy**.
 
----
+## 🚀 Project Snapshot
 
-## 📌 Project Overview
+* **Goal:** Build an end-to-end NLP pipeline for automated news classification to enhance personalized content delivery.
+* **Dataset:** 2,126 articles across 5 balanced categories.
+* **Tech Stack:** Python, NLTK, Scikit-learn, Pandas, Matplotlib, Seaborn, WordCloud.
+* **Key Skills:** NLP, Text Preprocessing, Feature Engineering, Classification, Visualization.
 
-This project aims to automate the classification of news content into categories such as **Politics, Technology, Sports, Business, and Entertainment** using Natural Language Processing and supervised machine learning.  
-The objective is to extract insights from text data, implement standard NLP preprocessing steps, and build a robust multi-class classifier pipeline that generalizes well across news topics.
+## 📊 Dataset & Class Balance
 
----
+* **Size:** 2,126 articles.
+* **Categories:** Sports (23.7%), Business (23.6%), Politics (19.0%), Entertainment (17.4%), Technology (~16.3%).
+* **Balance Strategy:** No severe imbalance detected, so oversampling/undersampling were skipped. Used a **stratified train-test split (80:20)** to preserve category proportions and monitored fairness via per-class precision/recall.
 
-## 🧠 Concepts Applied
+## 🔧 Pipeline Highlights
 
-- Natural Language Processing (NLP)
-- Text Preprocessing  
-  - Removing special characters and digits  
-  - Tokenization  
-  - Stopword Removal  
-  - Lemmatization  
-- Feature Engineering:  
-  - Bag of Words  
-  - TF-IDF Vectorization  
-- Classification Models:  
-  - Naive Bayes  
-  - Decision Tree  
-  - K-Nearest Neighbors  
-  - Random Forest  
-- Model Evaluation  
-  - Accuracy  
-  - Confusion Matrix  
-  - Classification Report
+* **Preprocessing:** Cleaned text (lowercase, punctuation removal, custom stopwords via TF-IDF analysis), applied lemmatization for context-aware word forms.
+* **Feature Engineering:** Explored Bag of Words (BoW) and TF-IDF vectorization. **BoW outperformed TF-IDF (97.6% vs. 96.7% accuracy)**.
+* **Models Trained:** Naive Bayes (best: 97.6% accuracy), Random Forest, Decision Tree, K-Nearest Neighbors.
+* **Evaluation:** Used Accuracy, Precision, Recall, F1 Score. Visualized results with Confusion Matrices and Word Clouds.
 
----
+## 📈 Results
 
-## 📂 Dataset
+| Model         | BoW Accuracy | TF-IDF Accuracy |
+| :------------ | :----------- | :-------------- |
+| **Naive Bayes** | **97.6%** | 96.7%           |
+| Random Forest | 95.5%        | 95.1%           |
+| KNN           | 69.5%        | 95.3%           |
+| Decision Tree | 86.4%        | 84.5%           |
 
-| Feature   | Description                                       |
-|-----------|---------------------------------------------------|
-| `Article` | Raw textual content of news articles              |
-| `Category`| Predefined label for classification (5 categories)|
+* **Naive Bayes + BoW:** Top performer, ideal for balanced text classification.
+* **Visuals:** Word clouds confirmed improved feature relevance post-preprocessing.
+   ![Alt text](confusion_matrices.png)
 
-📝 **Note**: Dataset provided by the academic institution as part of coursework. Source kept confidential.
+## 🧠 Key Takeaways
 
----
+* Custom stopwords significantly boosted model performance.
+* Naive Bayes excelled even over more complex models.
+* BoW proved more effective than TF-IDF for this dataset's term frequency characteristics.
+* Fairness was ensured through stratified splitting and per-class metric monitoring.
 
-## 🔁 Project Workflow
+## 🔮 Future Enhancements
 
-1. **Data Loading**
-   - Imported CSV dataset
-   - Verified format and data types
+* Explore advanced NLP models (e.g., BERT).
+* Automate the stopwords update.
+* Implement cross-validation for robustness.
+* Conduct topic modeling for deeper insights.
 
-2. **Initial Exploration**
-   - Checked dataset shape and missing values
-   - Analyzed distribution across categories
+## 🛠 Tools Used
 
-3. **Data Cleaning**
-   - Removed duplicate articles to avoid data leakage
-   - Ensured a **balanced dataset** for fair model training
+* Python, Pandas, NumPy
+* NLTK (preprocessing)
+* Scikit-learn (models, metrics)
+* Matplotlib, Seaborn, WordCloud (visuals)
 
-4. **Text Preprocessing**
-   - Lowercasing, removing non-letters
-   - Tokenization
-   - Stopword removal
-   - Lemmatization using `WordNetLemmatizer`
-   - Displayed before/after example for clarity
+## 👤 About Me
 
-5. **Feature Transformation**
-   - Label encoding of target variable
-   - Text vectorization using:
-     - **Bag of Words**
-     - **TF-IDF** (default method)
-
-6. **Model Development**
-   - Performed train-test split (75:25)
-   - Trained models:
-     - Naive Bayes (baseline)
-     - Decision Tree
-     - K-Nearest Neighbors
-     - Random Forest
-   - Code modularized into functions for reusability
-
-7. **Evaluation**
-   - Plotted confusion matrix
-   - Printed classification reports
-   - Comparative analysis of all models (to be updated)
+**John Doe** | 🔗 [LinkedIn](https://www.linkedin.com/in/aadhisilambarasan/) | 📫 [22.aadhi@gmail.com](mailto:22.aadhi@gmail.com) | 🌐 [GitHub](https://github.com/Aadhisilambarasan)
+_Passionate Data enthusiast skilled in NLP and ML._
 
 ---
-
-## 📊 Results
-
-🚧 _Under Evaluation — This section will be updated after optimizing model performance._
-
----
-
-## ❓ Sample Questions Addressed
-
-- How many news articles are present in the dataset?
-- Which category has the most and least articles?
-- What are stopwords and why are they removed?
-- How does **Lemmatization** differ from **Stemming**?
-- Which technique is more efficient: Bag of Words vs TF-IDF?
-- What are the dimensions of the train and test datasets?
-- Which model performed best? _(To be finalized)_
-- Is precision as important as recall in this case? → ✅ **True**
-
----
-
-
-## 📌 Note
-
-This project is to demonstrate the application of **Natural Language Processing** and **Machine Learning** in solving real-world classification problems.
-
----
+⭐ Star this repo if it inspires you! Feedback welcome.
