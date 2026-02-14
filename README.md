@@ -58,7 +58,7 @@ Automates news article categorization for FlipItNews, a fintech startup, using N
 
 ## 👤 About Me
 
-**John Doe** | 🔗 [LinkedIn](https://www.linkedin.com/in/aadhisilambarasan/) | 📫 [22.aadhi@gmail.com](mailto:22.aadhi@gmail.com) | 🌐 [GitHub](https://github.com/Aadhisilambarasan)
+**Silambarasan** | 🔗 [LinkedIn](https://www.linkedin.com/in/aadhisilambarasan/) | 📫 [22.aadhi@gmail.com](mailto:22.aadhi@gmail.com) | 🌐 [GitHub](https://github.com/Aadhisilambarasan)
 _Passionate Data enthusiast skilled in NLP and ML._
 
 ---
